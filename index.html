@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio | Marlon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Marlon</h1>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <a href="#sobre">Quem sou eu</a>
+            <a href="#hobbies">Hobbies e interesses</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Seção sobre mim -->
+        <section id="sobre">
+            <h2>Quem sou eu</h2>
+
+            <p>
+                Olá! Meu nome é Marlon, tenho 24 anos e atualmente
+                 estou estudando Front-end no SENAI.
+            </p>
+
+            <p>
+                Sempre gostei de mexer em computadores e, com o tempo,
+                 surgiu meu interesse pela programação. Decidi estudar
+                  essa área porque queria aprender algo novo e desenvolver
+                   novas habilidades.
+            </p>
+
+            <p>
+                Meu objetivo é trabalhar como desenvolvedor, conquistar
+                 minha primeira oportunidade profissional na área de
+                  tecnologia e continuar evoluindo como programador.
+            </p>
+        </section>
+
+        <!-- Seção de hobbies -->
+        <section id="hobbies">
+            <h2>Hobbies e interesses</h2>
+
+            <p>
+        Gosto bastante de ficar em casa, assistir a filmes de
+        ficção científica e jogar diferentes tipos de jogos.
+        Também gosto de reunir os amigos para jogar e passar
+        bons momentos juntos.
+    </p>
+
+    <p>
+        A música faz parte da minha rotina, costumo escutar
+        quase o dia inteiro. Também gosto de aprender coisas
+        novas, jogar futebol e soltar pipa.
+    </p>
+
+    <p>
+        Não sou muito de praticar esportes, mas procuro me
+        movimentar sempre que posso e experimentar coisas diferentes.
+    </p>
+        </section>
+
+        <!-- Seção de contato -->
+        <section id="contato">
+            <h2>Entre em contato</h2>
+
+            <form id="formulario">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+
+    </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2026 - Marlon. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+    // Validação do formulário
+    let formulario = document.getElementById("formulario")
+
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let assunto = document.getElementById("assunto").value;
+        let mensagem = document.getElementById("mensagem").value;
+
+        if (nome === "" || email === "" || assunto === "" || mensagem === "") {
+            alert("Preencha todos os campos!");
+        } else {
+            alert("Mensagem enviada com sucesso!");
+            formulario.reset();
+        }
+    })
+</script>
+
+
+</body>
+</html>
